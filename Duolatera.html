@@ -14,14 +14,14 @@
 	</head>
 	<body class="is-preload">
 		<!-- Header -->
-		<section id = "one" class="main style3" style="background-color: #358376;">
-			<div class="container" >
-				<div class="row gtr-150">
-					<div class="col-8 col-12-medium imp-medium">
-					<a href= "index.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="FFFFFF">About Me</font></a>
-					<a href= "Duolatera.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="FFFFFF">Duolatera</font></a>
-					<a href= "OceanSim.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="FFFFFF">OceanSim</font></a>
-					<a href= "Warped.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="FFFFFF">Warped</font></a>
+		<section id = "one" class="main style3" style="background-color: #ffffff;">
+			<div class="container"  >
+				<div class="row gtr-150" >
+					<div class="col-8 col-12-medium imp-medium" >
+						<a href= "index.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376";>About Me</font></a>
+						<a href= "Duolatera.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Duolatera</font></a>
+						<a href= "OceanSim.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">OceanSim</font></a>
+						<a href= "Warped.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Warped</font></a>
 					</div>
 				</div>
 			</div>
@@ -91,19 +91,70 @@
 				<h3> 
 					<b>Global Cel-Shading</b>
 				</h3>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<p style="margin-bottom: 1em;">
+							The overall art style of Duolatera is low-poly and cartoonish, therfore, we decided to use cel-shading as our render style.
+							<br/>
+							Due to multiple reasons such as framrates and Duolatera being a VR game, we use forward shading as our rendering pipeline(default UE5 VR setting).
+							Normally, cel-shading in deffered rendering is achieved by accessing the G-Buffer for various data and applying post-process effect on the whole scene.
+							Using forward rendering means that there is no G-Buffer for me to use and therfore I have to find another way around.
+						</p>
+						<p style="margin-bottom: 1em;">
+							In order to achieve the cel-shading effect, I replicated the phong model and created a material function that converts the input color to cel-shading color.
+							Artists can easily use it on any object they want or even any part of the texture they want. 
+						</p>
+						<p style="margin-bottom: 1em;">
+							For example, they can use cel-shading color for a part of a prop but preserve other textures on the prop. The Pistol on the right is an example.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">
+						<div class="row gtr-150">
+							<div class="col-6 col-12-medium">
+								<span class="image fit"><img src="images/Cel_Ball.png" alt="" /></span>
+								<span class="image fit"><img src="images/Cel_Pistol.png" alt="" /></span>
+								<span class="image fit"><img src="images/Cel_RingSensor.png" alt="" /></span>
+							</div>
+							<div class="col-6 col-12-medium">
+								<span class="image fit"><img src="images/Cel_Button.png" alt="" /></span>
+								<span class="image fit"><img src="images/Cel_Gate.png" alt="" /></span>
+							</div>
+						</div>
+					</div>
+				</div>
 				<h3> 
 					<b>Portal VFX Between 2 Worlds</b>
 				</h3>
 				<div class="row gtr-150">
-					<div class="col-6 col-12-medium">
-						<p>
-							Introduction
+					<div class="col-6 col-12-medium" >
+						<p style="margin-bottom: 1em;">
+							One of the main mechanisms of Duolatera is Portals. Portals exist through out the whole gameplay and they always appear in pairs. 
+							If a portal exists in the Overworld, a corresponding portal must also exists in the Underworld on the same spot. Players travel between worlds through these portals to solve the puzzles.
+						</p>
+						<p style="margin-bottom: 1em;">
+							Portals are all closed by default and are triggered only by "tagging" with laser tools. 
+							Here is a triggered portal in the Overworld and its corresponding portal in the Underworld. 
+						</p>
+						<p style="margin-bottom: 1em;">
+							The portal shader consists of 2 different materials: A <i>base material</i> and an <i>overlay material</i>.
+						</p>
+						<p style="margin-bottom: 1em;">
+							<b>Base portal material</b> is the scene texture captured by invisible cameras from the corresponding portal resulting in the "seethrough" effect.
+						</p>
+						<p style="margin-bottom: 1em;">
+							<b>Overlay portal material</b> is the VFX part of the material. It consists of distortion, "vortex" effects and allows customizations during spawning. 
+							Since portal VFX looks different in Overworld and Underworld, their materials are spawned when portals are triggered open. 
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
-						<span class="image fit"><img src="images/OverworldPortal.gif" alt="" /></span>
-					
-						<span class="image fit"><img src="images/UnderworldPortal.gif" alt="" /></span>
+						<span class="image fit" style="margin-bottom: 1em;"><img src="images/OverworldPortal.gif" alt="" /></span>
+						<p style="margin-top: 1em; text-align: center;" >
+							<b>Overworld Portal</b>
+						</p>
+						<span class="image fit" style="margin-bottom: 1em;"><img src="images/UnderworldPortal.gif" alt="" /></span>
+						<p style="margin-top: 1em; text-align: center;">
+							<b>Underworld Portal</b>	
+						</p>
 					</div>
 				</div>
 				<h3> 
@@ -111,7 +162,7 @@
 				</h3>
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
-						<p>
+						<p style="margin-bottom: 1em;">
 							Introduction
 						</p>
 					</div>
