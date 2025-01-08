@@ -163,16 +163,104 @@
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
 						<p style="margin-bottom: 1em;">
-							Introduction
+							There are several kinds of props that player can interact with. 2 of the most important ones are "Taggables" and "Interactables".
+							"Taggables" are the ones that players can shoot with their laser guns and "Interactables" are the ones that players can interact with their VR hands.
+							It's important that players can distinguish between different types of props so they can interact with them the way we intend.
+						</p>
+						<p style="margin-bottom: 1em;">
+							<b>Taggable material</b> is a continuous 3D overlay material which works with all the props in the scene regardless of the object's location and rotation.
+							Since the material is continuous in space, objects that are close to each other looks like they are under the same piece of texture.
+						</p>
+						<p style="margin-bottom: 1em;">
+							<b>Interactable material</b> is a world-space material which only takes the object's Z location value into account.
+							It is commonly used in many games as indication for something that is interactable. 
+						</p>
+						<p style="margin-bottom: 1em;">
+							I'm also in charge of a variaty of other visual indications in Duolatera such as outline material and aura material.
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
-						<span class="image fit"><img src="images/TaggableMat.gif" alt="" /></span>
-					
-						<span class="image fit"><img src="images/InteractableMat.gif" alt="" /></span>
+						<span class="image fit" style="margin-bottom: 1em;"><img src="images/TaggableMat.gif" alt="" /></span>
+						<p style="margin-top: 1em; text-align: center;">
+							<b>Taggable Material</b>	
+						</p>
+						<span class="image fit" style="margin-bottom: 1em;"><img src="images/InteractableMat.gif" alt="" /></span>
+						<p style="margin-top: 1em; text-align: center;">
+							<b>Interactable Material</b>	
+						</p>
 					</div>
 				</div>
-				
+				<h2> 
+					<b>Gameplay</b>
+				</h2>
+				<h3> 
+					<b>Menu System</b>
+				</h3>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<p style="margin-bottom: 1em;">
+							Duolatera has a main menu and an in-game menu. In the main menu, players can start the game/tutorial, calibrate themselves or exit the game.
+							In the in-game menu, players can leave game, calibrate themselves and change voice chat settings.
+						</p>
+						<p style="margin-bottom: 1em;">	
+							For the main menu, I implemented the UI functionality as well as game pairing functionalities. To start playing, players can either create sessions or join existing sessions.
+						</p>
+						<p style="margin-bottom: 1em;">	
+							For the in-game menu, I implemented the UI functionality and voice chat related functionalities. Players can enable, disable voice chat or set it to push to talk.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">
+						<div class="row gtr-150">
+							<div class="col-6 col-12-medium">
+								<span class="image fit"><img src="images/MainMenu.png" alt="" /></span>
+								<span class="image fit"><img src="images/SubMenu.png" alt="" /></span>
+							</div>
+							<div class="col-6 col-12-medium">
+								<span class="image fit"><img src="images/GameSession.png" alt="" /></span>
+								<span class="image fit"><img src="images/CreateGame.png" alt="" /></span>
+								<span class="image fit"><img src="images/JoinGame.png" alt="" /></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h3> 
+					<b>Dialogue System</b>
+				</h3>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<p style="margin-bottom: 1em;">
+							I implemented the dialogue system for the onboarding level. This is intended as a tool for designers to arrange dialogue prompts for onborading.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/Dialogue.png" alt="" /></span>
+						</div>
+					</div>	
+				</div>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<p style="margin-bottom: 1em;">
+							Designers can easily add, delete or move an entry. It is also a handy tool for them to set the desired input or lasting time for players to continue to the next promt.
+							By unchecking the "can continue" box, designers can set custom events to take place before the next dialogue entry.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">
+						<div class="col-6 col-12-medium">
+							<span class="image fit"><img src="images/DialogueSystem.png" alt="" /></span>
+						</div>
+					</div>	
+				</div>
+				<h3> 
+					<b>Other Gameplay</b>
+				</h3>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<p style="margin-bottom: 1em;">
+							Apart from the above, I'm also in charge of some gameplay functions such as sub-level system and functionalities of some game items.
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
 	
