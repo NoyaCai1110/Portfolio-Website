@@ -61,7 +61,7 @@
 							<b>Duration</b>
 						</h4>
 						<p>
-							5 months, 2024.8 - now
+							6 months, 2024.8 - now
 						</p>
 						<h4> 
 							<b>Team Size</b>
@@ -102,23 +102,23 @@
 							Using forward rendering means that there is no G-Buffer for me to use and therfore I have to find another way around.
 						</p>
 						<p style="margin-bottom: 1em;">
-							In order to achieve the cel-shading effect, I replicated the phong model and created a material function that converts the input color to cel-shading color.
-							Artists can easily use it on any object they want or even any part of the texture they want. 
+							In order to achieve the cel-shading effect, I replicated the phong model and created a material function that converts the input color and textures to cel-shading color.
+							I then made a master material using this material function and now artists can easily simply make a material instance of this master material and play with the parameters on the panels.
 						</p>
 						<p style="margin-bottom: 1em;">
-							For example, they can use cel-shading color for a part of a prop but preserve other textures on the prop. The Pistol on the right is an example.
+							This material allows albedo textures, basic tint and up to 3 different RGB texutures on 1 object.
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
 						<div class="row gtr-150">
 							<div class="col-6 col-12-medium">
+								<span class="image fit"><img src="images/Cel_VRPawn.png" alt="" /></span>
+								<span class="image fit"><img src="images/Cel_Lasertool.png" alt="" /></span>
 								<span class="image fit"><img src="images/Cel_Ball.png" alt="" /></span>
-								<span class="image fit"><img src="images/Cel_Pistol.png" alt="" /></span>
-								<span class="image fit"><img src="images/Cel_RingSensor.png" alt="" /></span>
 							</div>
 							<div class="col-6 col-12-medium">
-								<span class="image fit"><img src="images/Cel_Button.png" alt="" /></span>
-								<span class="image fit"><img src="images/Cel_Gate.png" alt="" /></span>
+								<span class="image fit"><img src="images/Cel_Pillar.png" alt="" /></span>
+								<span class="image fit"><img src="images/Cel_RingSensor.png" alt="" /></span>
 							</div>
 						</div>
 					</div>
@@ -258,7 +258,7 @@
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
 						<p style="margin-bottom: 1em;">
-							Apart from the above, I'm also in charge of some gameplay functions such as sub-level system and functionalities of some game items.
+							Apart from the above, I'm also in charge of loading and saving game system, sub-level system and functionalities of parts of the gameplay.
 						</p>
 					</div>
 				</div>
