@@ -392,7 +392,7 @@
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
 						<p style="margin-bottom: 1em;">
-							When an incorrect key symbol is inserted in a slot, ALL of the key symbols on both worlds will be ejected from their slots, emptying the Lockset.
+							When an incorrect key symbol is inserted in a slot, ALL of the key symbols in both worlds will be ejected from their slots, emptying the Lockset.
 							All the holo-triangles on the Keyset in both worlds will briefly turn red and then once again go back the lit up state.
 						</p>
 					</div>
@@ -406,7 +406,7 @@
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
 						<p style="margin-bottom: 1em;">
-							When ALL the slots on the Lockset is filled with the correct key symbols, the holo-triangles will light up brightly in green on both world.
+							When ALL the slots on the Lockset is filled with the correct key symbols, the holo-triangles will light up brightly in green in both worlds.
 							This marks the completion of phase 2.
 						</p>
 					</div>
@@ -422,9 +422,57 @@
 				</h3>
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
+						<h4>
+							Load Game
+						</h4>
 						<p style="margin-bottom: 1em;">
-							
+							Duolatera allows player to start from their desired act once they reached the corresponding checkpoint.
+							When the host player creates the lobby, they can select the act from their checkpoints, the client player joining the same session will be put on the same checkpoint when game loads.
 						</p>
+						<p>
+							This is achieved by saving the selected act number in the host player's game instance and comparing the number with the playerstarts' tag number in game mode.
+							For this purpose, I implemented a C++ VRGameInstance class which is the child class of UE5's GameInstance class and a C++ VRGameMode class which is a child class of UE5's GameMode class.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">	
+						<span class="image fit" style="margin-bottom: 1em;"><img src="images/LevelSelector.png" alt="" /></span>
+						<p style="margin-top: 1em; text-align: center;">
+							<b>Select Checkpoints</b>	
+						</p>
+					</div>
+				</div>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<p style="margin-bottom: 1em;">
+							When players reach a checkpoint, a level loader will load the next level and unload the previous level upon both players entering the checkpoint area.
+							</br>
+							This is done through UE5's sub-level system, as the game progress, there will only be 1 level that is currently loaded, which is crucial to keeping a overall high framerate.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">	
+						<span class="image fit" style="margin-bottom: 1em;"><img src="images/LoadLevel.gif" alt="" /></span>
+						<p style="margin-top: 1em; text-align: center;">
+							<b>Load Level</b>	
+						</p>
+					</div>
+				</div>
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<h4>
+							Save Game
+						</h4>
+						<p style="margin-bottom: 1em;">
+							When the host player selects the act they want in the menu and creates a session, the infomation will be passed along in the session property string in extra settings in a session.
+							The player joining the session therfore, would be able to see which act the host wants to start before clicking the join button.
+							This number represents the current act the host is in and will be updated whenever the players get to the next checkpoint.
+						</p>
+						<p>
+							During gameplay, player's location and orientation are updated per telepotation and upon a player logging out, whether it's because of self quitting or internet error.
+							Therfore, rejoining player will be put on the last known legal location and orientation before they left.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium">	
+						
 					</div>
 				</div>
 				<h3> 
@@ -463,7 +511,7 @@
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
 						<p style="margin-bottom: 1em;">
-							I implemented the dialogue system for the onboarding level. This is intended as a tool for designers to arrange dialogue prompts for onborading.
+							I implemented the dialogue system for the onboarding level. This is intended as a tool for designers to arrange dialogue prompts for onboarding.
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
