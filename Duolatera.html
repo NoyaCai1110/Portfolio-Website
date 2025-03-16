@@ -97,7 +97,7 @@
 						<p style="margin-bottom: 1em;">
 							The overall art style of Duolatera is low-poly and cartoonish, therfore, we decided to use cel-shading as our render style.
 							<br/>
-							Due to multiple reasons such as framrates and Duolatera being a VR game, we use forward shading as our rendering pipeline(default UE5 VR setting).
+							Due to multiple reasons such as framerates and Duolatera being a VR game, we use forward shading as our rendering pipeline(default UE5 VR setting).
 							Normally, cel-shading in deffered rendering is achieved by accessing the G-Buffer for various data and applying post-process effect on the whole scene.
 							Using forward rendering means that there is no G-Buffer for me to use and therfore I have to find another way around.
 						</p>
@@ -169,7 +169,7 @@
 							It's important that players can distinguish between different types of props so they can interact with them the way we intend.
 						</p>
 						<p style="margin-bottom: 1em;">
-							<b>Taggable material</b> is a continuous 3D overlay material which works with all the props in the scene regardless of the object's location and rotation.
+							<b>Taggable material</b> is a world space continuous 3D material which works with all the props in the scene regardless of the object's location and rotation.
 							Since the material is continuous in space, objects that are close to each other looks like they are under the same piece of texture.
 						</p>
 						<p style="margin-bottom: 1em;">
@@ -177,7 +177,7 @@
 							It is commonly used in many games as indication for something that is interactable. 
 						</p>
 						<p style="margin-bottom: 1em;">
-							I'm also in charge of a variaty of other visual indications in Duolatera such as outline material and aura material.
+							I made the 2 above materials that are very commonly used in the game into material functions and added them into the master cel-shading material so programmers are able to control the on and off of these 2 effects by simply changing the corresponding scalar parameters on the material. 
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
