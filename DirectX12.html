@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Hustle</title>
+		<title>DX12 Pathtracer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -29,14 +29,14 @@
 				</div>
 			</div>
 		</section>
-		<!-- One -->
-		<section id="one" class="main style2">
-			<div class="container">				
+		<!-- Two -->
+		<section id="two" class="main style2">
+			<div class="container">
 				<h1 style = "text-align: center;">
-					<b>Hustle</b>
+					<b>DirectX12 Real-Time Path Tracer</b>
 				</h1>
 				<h3 style="font-style: italic; text-align: center;">
-					A VR puzzle-adventure game.
+					A DX12 based Real-Time Pathtracer
 				</h3>
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
@@ -44,19 +44,18 @@
 							<b>Overview</b>
 						</h4>
 						<p>
-							HUSTLE is a comfort-first VR puzzle-adventure set in a retro-future sci-fi world. 
-							Players take on the role of a bounty hunter, solving hands-on, room-scale puzzles by tinkering, hacking, and assembling devices under pressure. 
-							The game emphasizes player freedom, offering multiple valid solutions to each challenge while blending tactile VR mechanics with cinematic worldbuilding.
-						</p>
-						<p>
-							Project Website: <a href="https://www.ylemstudio.com/"> <b>Hustle</b> </a>
-							<br/>
-							Steam Page Coming Soon: 
-							<a href=""> <b>PlaceHolder</b> </a>
+							This project is built on a DirectX 12 renderer adapted from an open-source DirectX 11 <a href="https://github.com/vixorien/D3D11Starter" target="_blank"> <u>project</u> </a>. 
 						</p>
 						<p>	
-							<br/>
-							Here is the official teaser. <b>↓</b>
+							In this project, I upgraded an open-source DirectX 11 renderer to DirectX 12 and extended it to support real-time ray tracing. 
+							My work included redesigning the rendering pipeline, implementing bindless texture access, and integrating modern GPU-driven techniques to improve flexibility, scalability, and performance.
+							<br />
+							<br />
+							Try it out here: 
+							<a href="https://github.com/NoyaCai1110/DX12" target="_blank"> <b>GitHub Download</b> </a>
+						</p>
+						<p>
+							Here is the demo video. <b>↓</b>
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
@@ -64,56 +63,30 @@
 							<b>Duration</b>
 						</h4>
 						<p>
-							8 months, 2025.5 - now
+							3 months, 2025.1 - 2025.4
 						</p>
 						<h4> 
-							<b>Studio Team Size</b>
+							<b>Team Size</b>
 						</h4>
 						<p>
-							6
+							1
 						</p>
 						<h4> 
 							<b>My Role</b>
 						</h4>
 						<p>
-							Gameplay/Graphics Programmer, Technical Artist
+							Graphics Programmer
 						</p>
 						<h4> 
 							<b>Tools and Environment</b>
 						</h4>
 						<p>
-							Unreal Engine 5(<a href="https://github.com/Oculus-VR/UnrealEngine"> <u>Oculus Branch</u> </a>), C++, HLSL, Visual Studio
+							DirectX12, C++, HLSL, Visual Studio
 						</p>
 					</div>
-				</div>
-								
-				<iframe width="720" height="720" src="https://www.youtube.com/embed/dAQE7rst24I"  style="margin-left: 18%;"></iframe>
-				<br/><br/>
-				<h2> 
-					<b>Gameplay System</b>
-				</h2>
-				<h3> 
-					<b>Assembly System</b>
-				</h3>
-				<div class="row gtr-150">
-					<div class="col-6 col-12-medium">
-						<p style="margin-bottom: 1em;">
-							This VR assembly system uses a map-based data structure to store and validate attachment relationships between parts. 
-							Each part maps to a set of compatible attachment points along with associated metadata such as snap transforms, orientation rules, and constraint parameters. 
-							This allows the system to efficiently determine valid connections during user interaction.
-						</p>
-						<p style="margin-bottom: 1em;">
-							When a valid attachment is detected, the system dynamically creates physics constraints to bind the corresponding rigid bodies together. 
-							These constraints ensure assembled objects behave as cohesive, physically realistic structures while still responding naturally to forces, 
-							collisions, and user manipulation in VR. The system supports stable assemblies while preserving flexibility for interaction, making the assembly process feel grounded and intuitive.	
-						</p>
-					</div>
-					<div class="col-6 col-12-medium">
-						<div class="col-6 col-12-medium imp-medium">
-							<iframe width="540" height="540" src="https://www.youtube.com/embed/JuOwX6brTHk" frameborder="0" allowfullscreen></iframe>
-						</div>
-					</div>
-				</div>
+				</div>					
+				<iframe width="720" height="720" src="https://www.youtube.com/embed/GQ_OP3ibcn0"  style="margin-left: 18%;"></iframe>						
+			</div>
 		</section>
 	
 		<!-- Footer -->
@@ -135,7 +108,6 @@
 				</div>
 			</div>
 		</section>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

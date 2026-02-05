@@ -17,10 +17,12 @@
 		<section id = "one" class="main style3" style="background-color: #ffffff;">
 			<div class="container"  >
 				<div class="row gtr-150" >
-					<div class="col-8 col-12-medium imp-medium" >
+					<div class="col-12 col-12-medium imp-medium" >
 						<a href= "index.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376";>About Me</font></a>
 						<a href= "Hustle.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Hustle</font></a>
 						<a href= "Duolatera.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Duolatera</font></a>
+						<a href= "DirectX11.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">DX11</font></a>
+						<a href= "DirectX12.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">DX12</font></a>
 						<a href= "OceanSim.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">OceanSim</font></a>
 						<a href= "Warped.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Warped</font></a>
 					</div>
@@ -43,9 +45,9 @@
 								My personal projects include games made with friends and my own raytracer and shaders.
 								<br>
 								I received a Bachelor degree in Computer Science from 
-								<a href="https://www.usnews.com/education/best-global-universities/university-of-science-technology-of-china-cas-505547"> <u>USTC</u> </a> 
+								<a href="https://www.usnews.com/education/best-global-universities/university-of-science-technology-of-china-cas-505547" target="_blank"> <u>USTC</u> </a> 
 								in 2023 and a Master degree in Game Development from
-								<a href="https://www.rit.edu/study/game-design-and-development-ms"> <u> RIT </u></a>
+								<a href="https://www.rit.edu/study/game-design-and-development-ms" target="_blank"> <u> RIT </u></a>
 								in 2025
 								<br>
 								I've been practicing and playing the flute for 15 years and am now learning the guitar~
@@ -156,9 +158,83 @@
 				</div>
 			</div>
 		</section>
-
 		<!-- Two -->
 		<section id="two" class="main style2">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>
+								<b>Particle Renderer(DirectX11)</b>
+							</h2>
+							<h3 style="font-style: italic;">
+								A DX11 based particle system renderer.
+							</h3>
+						</header>
+						<p style="margin-bottom: 0.5em;">
+							This is a particle rendering system built on top of an open source C++ DirectX11 project. 
+							The system is written entirely in C++ and runs within a DirectX 11 rendering framework.
+						</p>	
+						<p style="margin-bottom: 0.5em;">
+							My work includes implementing sprite-based and mesh-based particle systems, support for custom materials, beam rendering, 
+							and mesh-shaped particle emitters, enabling flexible and extensible particle representations within the renderer.
+							<br/>
+							Code can be found here: 
+							<a href="https://github.com/NoyaCai1110/DX11" target="_blank"> <b>Particle Renderer</b> </a>
+						</p>
+						<div class="col-4 col-12-medium imp-medium" style="text-align: left; margin-left: 30%;">
+							<p>
+								<form action="DirectX11.html" target="_self">
+									<button style="border: #358376"><a>Details</a></button>
+								</form>	
+							</p>
+						</div>
+						<p style="color: #cfcfcf; font-weight: 400; font-size: 1em; margin-left: 80px;">
+							1 mo | solo project | Graphics Programmer
+						</p>
+					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<iframe width="540" height="540" src="https://www.youtube.com/embed/i5h0KLmnf7w" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Three -->
+		<section id="three" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>
+								<b>Real-Time Path Tracer(DirectX12)</b>
+							</h2>
+							<h3 style="font-style: italic;">
+								A DX12 based Real-Time Pathtracer.
+							</h3>
+						</header>
+						<p style="margin-bottom: 0.5em;">
+							This project is built on a DirectX 12 renderer adapted from an open-source DirectX 11 engine. 
+							I restructured the rendering pipeline for DX12 and implemented bindless texture support to enable flexible, scalable material and texture access for real-time ray tracing.
+						</p>
+						<div class="col-4 col-12-medium imp-medium" style="text-align: left; margin-left: 30%;">
+							<p>
+								<form action="DirectX12.html" target="_self">
+									<button style="border: #358376"><a>Details</a></button>
+								</form>
+							</p>
+						</div>
+						<p style="color: #555555; font-weight: 400; font-size: 1em; margin-left: 80px;">
+							3 mo | solo project | Graphics Programmer
+						</p>
+					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<iframe width="540" height="480" src="https://www.youtube.com/embed/GQ_OP3ibcn0" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Four -->
+		<section id="four" class="main style2">
 			<div class="container">
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
@@ -178,7 +254,7 @@
 							My work includes Gerstner wave function for ambient ocean wave, circle wave function for ripples, generating sand using perlin noise and light system.
 							<br/>
 							Code can be found here: 
-							<a href="https://github.com/NoyaCai1110/Ocean-Simulator"> <b>Ocean-Simulator</b> </a>
+							<a href="https://github.com/NoyaCai1110/Ocean-Simulator" target="_blank"> <b>Ocean-Simulator</b> </a>
 						</p>
 						<div class="col-4 col-12-medium imp-medium" style="text-align: left; margin-left: 30%;">
 							<p>
@@ -197,8 +273,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- Three -->
-		<section id="three" class="main style1">
+		<!-- Five -->
+		<section id="five" class="main style1">
 			<div class="container">
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
@@ -236,8 +312,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- Four -->
-		<section id="four" class="main style2">
+		<!-- Six -->
+		<section id="six" class="main style2">
 			<div class="container">
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
@@ -267,8 +343,8 @@
 			</div>
 		</section>
 		
-		<!-- Five -->
-		<section id="five" class="main style1">
+		<!-- Seven -->
+		<section id="seven" class="main style1">
 			<div class="container">
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
@@ -294,8 +370,8 @@
 			</div>
 		</section>
 
-		<!-- Six -->
-		<section id="six" class="main style2">
+		<!-- Eight -->
+		<section id="eight" class="main style2">
 			<div class="container">
 				<div class="row gtr-150">
 					<div class="col-6 col-12-medium">
@@ -336,7 +412,7 @@
 							<b>Noya Cai</b> 
 						</p>	
 						<p style = "text-align:left;  margin: 0 0 0 0;" >
-							Technical Artist / Gameplay Programmer
+							Gameplay Programmer / Graphics Programmer / Technical Artist
 						</p>
 					</div>
 					<div class="col-6 col-12-medium">
