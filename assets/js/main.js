@@ -29,4 +29,15 @@
 	// Scrolly.
 		$('.scrolly').scrolly();
 
+	// Footer: invisible at top, fade in on scroll.
+		(function() {
+			var $footer = $('#footer');
+			var scrollThreshold = 120;
+			function updateFooterVisibility() {
+				$footer.toggleClass('footer-visible', $window.scrollTop() > scrollThreshold);
+			}
+			$window.on('scroll', updateFooterVisibility);
+			updateFooterVisibility();
+		})();
+
 })(jQuery);
