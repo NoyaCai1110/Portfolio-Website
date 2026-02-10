@@ -292,8 +292,8 @@ input, select, textarea {
 		}
 
 	.site-header .container {
-		width: 100%;
-		max-width: calc(100% - 2em);
+		width: 100% !important;
+		max-width: calc(100% - 2em) !important;
 	}
 
 		@media screen and (max-width: 480px) {
@@ -2837,7 +2837,7 @@ input, select, textarea {
 	}
 
 	.site-header.main {
-		padding: 0.75em 0 0.75em 0 ;
+		padding: 0.75em 0 0.75em 0 !important;
 	}
 
 	.hero-section.main {
